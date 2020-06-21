@@ -13,8 +13,8 @@ jobs:
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
           docker-registry: "docker.io"
           notebook-env: |
-            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }
-            MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }
+            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
+            MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }}
 on:
   schedule:
     - cron: "0 0 * * 1"
@@ -30,4 +30,4 @@ jobs:
           api-key: ${{ secrets.TREEBEARD_API_KEY }}
           notebooks: "Only run this notebook.ipynb"
           notebook-env: |
-            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }
+            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
