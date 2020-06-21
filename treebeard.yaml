@@ -1,0 +1,6 @@
+output_dirs:
+  - output
+ignore:
+  - .ipynb_checkpoints
+  - .git
+  - .vscode

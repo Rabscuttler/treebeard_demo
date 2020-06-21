@@ -1,0 +1,6 @@
+treebeard
+jupyter
+matplotlib
+numpy
+pandas
+seaborn
