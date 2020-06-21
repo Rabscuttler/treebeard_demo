@@ -1,4 +1,6 @@
-on: [push]
+on:
+  schedule:
+    - cron: "0 0 * * 1"
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -12,22 +14,7 @@ jobs:
           docker-username: my_container_registry_username
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
           docker-registry: "docker.io"
-          notebook-env: |
-            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
-            MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }}
-on:
-  schedule:
-    - cron: "0 0 * * 1"
-jobs:
-  daily_API_test:
-    runs-on: ubuntu-latest
-    name: Run treebeard
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - uses: treebeardtech/treebeard@local-docker
-        with:
-          api-key: ${{ secrets.TREEBEARD_API_KEY }}
           notebooks: "Only run this notebook.ipynb"
           notebook-env: |
             MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
+            MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }}
