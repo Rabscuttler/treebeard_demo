@@ -1,4 +1,3 @@
-treebeard
 jupyter
 matplotlib
 numpy

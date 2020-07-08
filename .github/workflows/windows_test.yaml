@@ -9,9 +9,7 @@ jobs:
       - run: pip install -r requirements.txt # Manually install python deps as running dockerless
       - uses: treebeardtech/treebeard@master
         with:
-          docker-username: treebeardtech
-          docker-password: "${{ secrets.DOCKER_PASSWORD }}"
-          docker-image-name: treebeardtech/treebeard_demo
+          use-docker: False
           notebooks: "Windows test.ipynb"
         env:
           TB_MY_CUSTOM_AUTH_TOKEN: ${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
