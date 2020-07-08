@@ -14,6 +14,6 @@ jobs:
           docker-username: treebeardtech
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
           docker-image-name: treebeardtech/treebeard_demo
-          notebooks: "Only run this notebook.ipynb"
+          notebooks: "hello_world.ipynb"
         env:
           TB_MY_CUSTOM_AUTH_TOKEN: ${{ secrets.MY_CUSTOM_AUTH_TOKEN }}

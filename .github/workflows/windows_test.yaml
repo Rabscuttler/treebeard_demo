@@ -9,7 +9,6 @@ jobs:
       - run: pip install -r requirements.txt # Manually install python deps as running dockerless
       - uses: treebeardtech/treebeard@master
         with:
-          api-key: ${{ secrets.TREEBEARD_API_KEY }}
           docker-username: treebeardtech
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
           docker-image-name: treebeardtech/treebeard_demo

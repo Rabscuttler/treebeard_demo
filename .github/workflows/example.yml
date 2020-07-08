@@ -8,4 +8,5 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: treebeardtech/treebeard@master
         with:
+          notebooks: "hello_world.ipynb"
           api-key: ${{ secrets.TREEBEARD_API_KEY }}
