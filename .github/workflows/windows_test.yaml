@@ -11,5 +11,6 @@ jobs:
         with:
           use-docker: False
           notebooks: "Windows test.ipynb"
+          debug: true
         env:
           TB_MY_CUSTOM_AUTH_TOKEN: ${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
