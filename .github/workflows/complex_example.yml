@@ -8,13 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
-      - uses: treebeardtech/treebeard@local-docker
+      - uses: treebeardtech/treebeard@master
         with:
           api-key: ${{ secrets.TREEBEARD_API_KEY }}
-          docker-username: my_container_registry_username
+          docker-username: treebeardtech
           docker-password: "${{ secrets.DOCKER_PASSWORD }}"
-          docker-registry: "docker.io"
+          docker-image-name: treebeardtech/treebeard_demo
           notebooks: "Only run this notebook.ipynb"
-          notebook-env: |
-            MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
-            MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }}
+        env: |
+            TB_MY_CUSTOM_AUTH_TOKEN=${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
+            TB_MY_SECOND_CUSTOM_AUTH_TOKEN=${{ secrets.MY_SECOND_CUSTOM_AUTH_TOKEN }}
