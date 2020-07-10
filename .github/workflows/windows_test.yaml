@@ -10,6 +10,6 @@ jobs:
       - uses: treebeardtech/treebeard@master
         with:
           use-docker: False
-          notebooks: "Windows test.ipynb"
+          notebooks: "windows_test.ipynb"
         env:
           TB_MY_CUSTOM_AUTH_TOKEN: ${{ secrets.MY_CUSTOM_AUTH_TOKEN }}
